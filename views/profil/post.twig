@@ -1,0 +1,20 @@
+{% extends "../layout/template.twig" %}
+{% block main %}
+<h1>{{ main }}</h1>
+<form method="POST" action="*" class="form row">
+        <label for="avatar" class="col-12">
+            <span class="badge badge-primary">1</span>Votre image :
+        </label>
+            <input type="file" class="col-12 text-center" name="avatar" id="avatar"
+            placeholder="image" accept="image/png, image/jpeg" required/><br>
+        <label class="col-12" for="text">
+            <span class="badge badge-primary">2</span>Votre text :
+        </label>
+        <input class="col-12 text-center" type="text" name="text" id="text"
+            placeholder="text" required/><br>
+        <br>
+        <button class="col-12 text-center" type="submit">
+            <span class='badge badge-primary'>3</span>PREVIEW
+        </button>
+    </form>
+{% endblock %}

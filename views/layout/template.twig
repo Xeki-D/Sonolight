@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        {% block head %}
+        <link rel="stylesheet"
+            href="assets/bootstrap/perso.css">
+        <title>{{ title }}</title>
+        {% endblock %}
+    </head>
+    <body class="container">
+    
+        <h1>{{ title}}</h1>
+        <nav class="row">{% block nav %}
+            <ul class="col-12 text-center">{{ nav }}</ul>
+        {% endblock %}
+        </nav>
+        <main class="row">
+            {% block main %}
+                {{ main }}
+            {% endblock %}
+        </main>
+        {% if error %}
+            <div class="row">
+                {% block erreur %}
+                <div class="col-12 text-center error">
+                    {{ error }}
+                </div>
+                {% endblock %}
+            </div>
+        {% endif %}
+    <footer class="row">
+        <div class="col-12 text-center">
+            {% block footer %}
+                {{ footer }}
+            {% endblock %}
+        </div>
+    </footer>
+    </body>
+</html>
